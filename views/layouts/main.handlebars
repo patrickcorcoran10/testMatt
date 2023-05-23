@@ -1,0 +1,31 @@
+<head>
+  <meta charset="UTF-8">
+  <title>Vocab Vault</title>
+
+  <link rel="stylesheet" href="/css/jass.css">
+  <link rel="stylesheet" href="/css/style.css"> 
+</head>
+ 
+<body>
+  <div class="flex-column justify-space-around">
+    <header>
+      <h1>
+        VOCAB VAULT
+      </h1>
+    {{#if loggedIn}}
+    <button class="logout-button">Logout</button>
+    {{else}}
+    <a href="/login">Login</a>
+    {{/if}}
+    </header>
+    <main class="container">
+      {{{ body }}}
+    </main>
+  </div>
+
+    {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
